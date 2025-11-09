@@ -1,0 +1,67 @@
+.receipt-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background: rgba(23, 41, 70, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: modalFadeIn 0.35s;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.receipt-modal-content {
+  background: #fff;
+  padding: 40px 32px 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 54px rgba(36, 58, 151, 0.13);
+  min-width: 310px;
+  max-width: 93vw;
+  text-align: center;
+  animation: popIn 0.36s cubic-bezier(.45,1.8,.62,1.01);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.94); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.receipt-modal-content h2 {
+  font-size: 1.33rem;
+  font-weight: 700;
+  color: #2367a8;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+
+.receipt-modal-content p {
+  font-size: 1.12rem;
+  margin: 12px 0 19px 0;
+  color: #2c354a;
+}
+
+.receipt-close-btn {
+  margin-top: 18px;
+  padding: 12px 36px;
+  border: none;
+  background: linear-gradient(90deg, #0070f3 70%, #1dafff 100%);
+  color: #fff;
+  border-radius: 9px;
+  font-size: 1.07rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(36,58,151,0.13);
+  transition: background 0.17s, box-shadow 0.18s;
+}
+
+.receipt-close-btn:hover {
+  background: #005bb5;
+  box-shadow: 0 8px 32px rgba(36, 58, 151, 0.17);
+}
