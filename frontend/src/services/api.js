@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://mock-e-com-cart-j5i5.onrender.com/api';
 
 export async function getProducts() {
   const res = await axios.get(`${API_BASE}/products`);
