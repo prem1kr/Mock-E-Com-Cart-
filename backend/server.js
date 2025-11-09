@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 app.use(cors({
-  origin: 'http://localhost:3000',  // Allow only frontend origin
+  origin: '*',  // Allow only frontend origin
   optionsSuccessStatus: 200 // For legacy browsers support
 }));
 
